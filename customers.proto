@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service GreeterService {
+    rpc SeyHello (Empty) returns (Helloreply) {}
+}
+
+message Empty {}
+
+message Hello {
+    string message = 1;
+}
+
+message Helloreply {
+    repeated Hello hello = 1;
+}
